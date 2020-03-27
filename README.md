@@ -1,3 +1,11 @@
+# Build for CryptPad
+
+```
+yarn install
+yarn release
+```
+
+
 <!-- <Remove this in the future> -->
 | :mega: :mega: :mega: |
 | :----: |

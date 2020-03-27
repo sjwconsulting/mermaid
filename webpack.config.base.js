@@ -2,7 +2,7 @@ import path from 'path';
 
 const amdRule = {
   parser: {
-    amd: false // https://github.com/lodash/lodash/issues/3052
+    amd: true // https://github.com/lodash/lodash/issues/3052
   }
 };
 
@@ -49,13 +49,12 @@ export const jsConfig = () => {
       path: path.join(__dirname, './dist/'),
       filename: '[name].js',
       library: 'mermaid',
-      libraryTarget: 'umd',
+      libraryTarget: 'amd',
       libraryExport: 'default',
       globalObject: 'typeof self !== "undefined" ? self : this'
     },
     module: {
       rules: [amdRule, jsRule, scssRule, jisonRule]
     },
-    devtool: 'source-map'
   };
 };
